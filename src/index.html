@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Task Journal</title>
+</head>
+<body>
+    <div class="background"></div>
+    <div id="main-container">
+        <div class="header">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            <h1>Task Journal</h1>
+        </div>
+        <div class="navbar">
+            <div class="navigation">
+                <button type="button" class="todayBtn nav-buttons">today</button>
+                <button type="button" class="weekBtn nav-buttons">this week</button>
+                <button type="button" class="alltasksBtn nav-buttons">all tasks</button>
+            </div>
+            <h1>Categories</h1>
+            <div class="categories-container">
+                <div class="category-list">
+                    <div class="category">
+                        <button class="category-main">Demo</button> <button type="button" class="deleteCategoryBtn">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="add-category-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <div id="add-category-popup">
+                    <input type="text" name="categoryName" id="categoryName" autocomplete="off">
+                    <button type="button"id="submitCategoryBtn"><i class="fa fa-check" aria-hidden="true"></i></button> 
+                    <button type="button" id="cancelCategoryBtn"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="matt-content"></div>
+                <div class="content-header">
+                    <h1 id="category-name-header">Tasks Manager</h1>
+                    <button type="button" id="add-task-btn"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+                <div id="task-list"></div>
+                <div id="add-task-popup">
+                    <span><strong>Add new task</strong></span>
+                    <div class="input-wrapper">
+                        <label for="taskName">Name:</label>
+                        <input type="text" name="taskName" id="taskName" autocomplete="off">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="taskDescription">Description:</label>
+                        <input type="text" name="taskDescription" id="taskDescription" autocomplete="off">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="dueDate">Due Date:</label>
+                        <input type="date" name="dueDate" id="dueDate">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="priority">Priority:</label>
+                        <input type="radio" name="priority" id="priorityLow" value="low">
+                        <input type="radio" name="priority" id="priorityMedium" value="medium">
+                        <input type="radio" name="priority" id="priorityHigh" value="high">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="selectCategory">Select category:</label>
+                        <select name="selectCategory" id="selectCategory">
+                            <option value="No category"> No category</option>
+                        </select>
+                    </div>
+                    <div class="add-task-buttons-wrapper">
+                        <button type="button"id="submitTaskBtn">Ok</button>
+                        <button type="button" id="cancelTaskBtn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
